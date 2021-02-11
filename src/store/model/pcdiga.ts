@@ -8,7 +8,7 @@ export const PCDiga: Store = {
       text: ['ADICIONAR AO CARRINHO'],
     },
     maxPrice: {
-      container: 'span[class="price-wrapper"]',
+      container: 'span[class="price-wrapper "]',
       euroFormat: true,
     },
     outOfStock: {

@@ -93,6 +93,9 @@ export type Model =
   | 'eagle oc'
   | 'eagle'
   | 'ekwb'
+  | 'epic x'
+  | 'ex gamer'
+  | 'ex oc'
   | 'founders edition'
   | 'ftw3'
   | 'ftw3 black'
@@ -124,8 +127,11 @@ export type Model =
   | 'igame advanced oc'
   | 'igame ultra oc'
   | 'igame vulcan oc'
+  | 'jetstream'
+  | 'jetstream oc'
   | 'ko oc'
   | 'ko'
+  | 'master'
   | 'merc'
   | 'merc core'
   | 'merc ultra'
@@ -136,6 +142,7 @@ export type Model =
   | 'nitro+ oc se'
   | 'nitro oc se'
   | 'nitro oc'
+  | 'oc'
   | 'pegasus'
   | 'pegasus oc'
   | 'phantom'
@@ -180,6 +187,7 @@ export type Model =
   | 'ventus 3x'
   | 'vision oc'
   | 'vision'
+  | 'x trio'
   | 'xbox series s'
   | 'xbox series x'
   | 'xc black'
@@ -192,6 +200,7 @@ export type Model =
   | 'xlr8 gaming'
   | 'xlr8 revel'
   | 'xlr8 uprising'
+  | 'xtreme'
   | 'qick';
 
 export type Link = {
@@ -207,11 +216,18 @@ export type Link = {
   url: string;
 };
 
+export type CaptchaHandlerElements = {
+  image: string;
+  input: string;
+  submit: string;
+};
+
 export type LabelQuery = Element[] | Element | string[];
 
 export type Labels = {
   bannedSeller?: LabelQuery;
   captcha?: LabelQuery;
+  captchaHandler?: CaptchaHandlerElements;
   container?: string;
   inStock?: LabelQuery;
   outOfStock?: LabelQuery;

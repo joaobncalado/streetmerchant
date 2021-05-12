@@ -127,10 +127,14 @@ export async function getPrice(
   if (priceString) {
     const formattedPriceString = priceString.replace(/\s/g, '');
     const priceSeparator = query.euroFormat ? /\./g : /,/g;
-    const price = Number.parseFloat(
-      formattedPriceString.replace(priceSeparator, '').match(/\d+/g)!.join('.')
-    );
-    logger.debug('formatted price: ' + price);
+    const cleanPriceString = priceString
+      .replace(/\s/g, '')
+      .replace(priceSeparator, '')
+      .match(/\d+/g)!
+      .join('.');
+    const price = Number.parseFloat(cleanPriceString);
+
+    logger.debug('received price', price);
     return price;
   }
 
